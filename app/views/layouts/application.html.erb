@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NaganoCake</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="col-xs-12 col-md-8">LOGO</div>
+    <div class="col-xs-12 col-md-1">About</div>
+      <div class="col-xs-12 col-md-1">商品一覧</div>
+      <div class="col-xs-12 col-md-1">新規登録</div>
+      <div class="col-xs-12 col-md-1">ログイン</div>
+    <%= yield %>
+  </body>
+</html>

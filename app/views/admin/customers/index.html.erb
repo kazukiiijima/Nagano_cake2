@@ -1,0 +1,22 @@
+<h1>会員一覧</h1>
+<table>
+	<thead>
+		<tr>
+			<th>会員ID</th>
+			<th>氏名</th>
+			<th>メールアドレス</th>
+			<th>ステータス</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @customers.each do |custmoer| %>
+			<tr>
+                <td><span><%= custmoer.id %></span></td>
+                <td><span><%= link_to custmoer.first_name, admin_customer_path(customer.id) %></span></td>
+                <td><span><%= customer.email %></span></td>
+                <td><span><%= customer.is_deleted %></span></td>s
+            </tr>
+        <% end %>
+	</tbody>
+</table>
