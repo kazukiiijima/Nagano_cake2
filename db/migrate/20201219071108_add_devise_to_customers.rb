@@ -14,12 +14,12 @@ class AddDeviseToCustomers < ActiveRecord::Migration[5.2]
       ## Rememberable
       t.datetime :remember_created_at
 
-      ## Trackable
-      # t.integer  :sign_in_count, default: 0, null: false
-      # t.datetime :current_sign_in_at
-      # t.datetime :last_sign_in_at
-      # t.string   :current_sign_in_ip
-      # t.string   :last_sign_in_ip
+      # Trackable
+      t.integer  :sign_in_count, default: 0, null: false
+      t.datetime :current_sign_in_at
+      t.datetime :last_sign_in_at
+      t.string   :current_sign_in_ip
+      t.string   :last_sign_in_ip
 
       ## Confirmable
       # t.string   :confirmation_token
@@ -35,13 +35,13 @@ class AddDeviseToCustomers < ActiveRecord::Migration[5.2]
 
       # Uncomment below if timestamps were not included in your original model.
       # t.timestamps null: false
-      t.string :last_name
-      t.string :first_name
-      t.string :last_name_kana
-      t.string :first_name_kana
-      t.string :postal_code
-      t.string :address
-      t.string :telephone_number
+      t.string :last_name, null: false
+      t.string :first_name, null: false
+      t.string :last_name_kana, null: false
+      t.string :first_name_kana, null: false
+      t.string :postal_code, null: false
+      t.string :address, null: false
+      t.string :telephone_number, null: false
       t.boolean :is_deleted
     end
 
