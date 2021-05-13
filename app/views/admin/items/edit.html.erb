@@ -13,7 +13,7 @@
 	<div>ジャンル</div>
 	<p>
 		<%= f.label :genre_id, 'ジャンル' %>
-		<%= f.select :genre_id, {'ケーキ': 1, 'プリン': 2, '焼き菓子': 3, 'キャンディ': 4}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+		<%= f.collection_select(:genre_id, @genres, :id, :name, { include_blank: '選択してください'}, { class: 'form-control' , required: true }) %>
 	</p>
 
 

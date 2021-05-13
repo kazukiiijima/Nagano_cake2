@@ -1,0 +1,28 @@
+
+<table>
+	<thead>
+		<tr>
+		<h1>ジャンル検索</h1>
+			<th><% @genres.each do |genre| %>
+		    		<div><%= link_to genre.name, items_path(genre: genre.id) %></div>
+				<% end %>
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<%= @genre_name %>一覧（全<%= @items_count %>件）
+			<% @items.each do |item| %>
+				<tr>
+					<td><span>
+						<%= attachment_image_tag item, :image, :fill, 60, 60 %>
+					</span></td>
+					<td><span><%= link_to item.name, item_path(item.id) %></span></td>
+					<td><span>¥<%= item.price %></span></td>
+				</tr>
+			<% end %>
+	</tbody>
+</table>
+
+
+
